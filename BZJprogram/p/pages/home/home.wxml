@@ -26,6 +26,8 @@
 
   <view id="rsstatus">{{rsstatus}}</view>
   <view class="venuename">{{venuename}}</view>
+  <view>{{date}}</view>
+  <view>{{time}}</view>
 </view>
 
 <text>这里是历史预约信息\n</text>

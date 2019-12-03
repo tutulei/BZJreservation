@@ -89,7 +89,7 @@ Page({
   formSubmit: function (e) {
     wx.showModal({
       title: '提示',
-      content: '数据提交后就不能再次修改！！！',
+      content: '提交后部分就不能再次修改！！！确认提交？',
       success: res=> {
         if (res.confirm) {
           console.log('用户点击确定')
@@ -123,7 +123,8 @@ Page({
         user_address: this.data.addr,
       }
     }).then(res => {
-      // console.log(res)
+      app.globalData.usermsg.user_phone = this.data.phone
+      app.globalData.usermsg.user_address = this.data.addr
     })
   },
   /*
