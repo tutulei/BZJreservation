@@ -16,9 +16,8 @@ Page({
     rsid:"",
     rsstatus:"",
     rsdate: null,
-    rsname:"",
     venuename:"",
-
+    venue_id:"",
     contactList: [{
       "name": "张三",
       "phone": "13588897356",
@@ -95,7 +94,7 @@ Page({
 
   appoint: function () {
     wx.navigateTo({
-      url: '../detail/detail?reser_id='+this.data.rsid
+      url: '../detail/detail?reser_id='+this.data.rsid+"&venue_id="+this.data.venue_id
     })
   },
 

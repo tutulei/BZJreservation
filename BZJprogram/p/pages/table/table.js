@@ -185,7 +185,7 @@ Page({
         reservation_date: this.data.date,
         reservation_menber: "",
         reservation_menbercount: this.data.pernumber,
-        reservation_usertools: this.data.hastools,
+        reservation_usetools: this.data.hastools,
         reservation_status: "待提交",
         venue_id:this.data.venue_id,
         reservation_reason:this.data.appreason,

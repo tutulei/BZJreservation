@@ -1,6 +1,28 @@
 <!--pages/detail/detail.wxml-->
-<text>这里是预约信息\n</text>
-<text>这里是成员信息\n</text>
+<!-- <text>这里是预约信息\n</text> -->
+<view>
+  <view id = "venuename">{{"预约场地名称："+venuename}}</view>
+  <view id = "reserstatus">{{"预约状态："+reserstatus}}</view>
+  <view id = "venueaddr">{{"场地地址："+venueaddr}}</view>
+  <view id = "venuetime">{{"预约场次："+veneutime}}</view>
+  <view id = "username">{{"申请人姓名："+leadername}}</view>
+  <view id = "venuedes">{{"场地描述："+venuedes}}</view>
+  <view id = "reserdate">{{"活动日期："+reserdate}}</view>
+  <view id = "reserfrom">{{"预约组织："+reserfrom}}</view>
+  <view id = "resermenbercount">{{"参与人数："+resermenbercount}}</view>
+  <view id = "reserphone">{{"预留手机号："+reserphone}}</view>
+  <view id = "reserreason">{{"申请原因："+reserreason}}</view>
+  <view id = "tools" hidden="{{!havetools}}">{{"所需工具："+tools}}</view>
+</view>
+
+<view class = "menberlable">
+  <view class="list-item" wx:for="{{menberslist}}">
+      <view class="name">{{item.name}}</view>
+      <view class="no">{{item.no}}</view>
+  </view>
+</view>
+
+
 
 <label id = "code" hidden="{{!isleader}}">{{"邀请码："+code}}</label>
 <button class="button" bindtap="kick" hidden="{{!isleader}}">踢出成员</button>
